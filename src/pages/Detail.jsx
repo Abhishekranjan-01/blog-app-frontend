@@ -2,6 +2,7 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import toast from "react-hot-toast";
 import { useParams } from "react-router-dom";
+import { constants } from "../constants/constants";
 
 function Detail() {
   const { id } = useParams();
@@ -11,12 +12,12 @@ function Detail() {
     const fetchblogs = async () => {
       try {
         const { data } = await axios.get(
-          `http://localhost:4001/api/blogs/single-blog/${id}`,
+          `${constants.API_BASE_URL}/api/blogs/single-blog/${id}`,
 
           {
             withCredentials: true,
             headers: {
-                "Content-Type": "application/json",
+              "Content-Type": "application/json",
             },
           }
         );

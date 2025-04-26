@@ -18,7 +18,7 @@ function Login() {
 
     try {
       const { data } = await axios.post(
-        "http://localhost:4001/api/users/login",
+        `${constants.API_URL}api/users/login`,
         { email, password, role },
         {
           withCredentials: true,
@@ -27,7 +27,7 @@ function Login() {
           },
         }
       );
-      console.log(data);
+      // console.log(data);
       // Store the token in localStorage
       localStorage.setItem("jwt", data.token); // storing token in localStorage so that if user refreshed the page it will not redirect again in login
       toast.success(data.message || "User Logined successfully", {
