@@ -84,7 +84,7 @@ function UpdateBlog() {
 
   return (
     <div>
-      <div className="container mx-auto my-12 p-4">
+      <div className="container pl-20 mx-auto my-12 p-4">
         <section className="max-w-2xl mx-auto">
           <h3 className="text-2xl font-bold mb-6">UPDATE BLOG</h3>
           <form>
